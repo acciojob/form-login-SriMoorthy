@@ -1,11 +1,8 @@
-function getFormvalue(fname,lname) {
+function getFormvalue() {
     //Write your code here
-	let fname = document.getElementByName('fname')
-	let lname = document.getElementByName('lname')
-	let button = document.getElementById('btn')
-
-	button.addEventListener('click',()=>{
-		return fname.value+' '+lname.value
-	})
+	let form = document.getElementById('form1')
+	let fname = form.elements['fname'].value
+	let lname = form.elements['lname'].value
+	let fullname = fname+' '+lname
+	alert(fullname)
 }
-alert(getFormvalue())
